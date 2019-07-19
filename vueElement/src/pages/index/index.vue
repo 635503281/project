@@ -56,7 +56,15 @@ export default {
 
   props: {},
 
-  components: {},
+  components: {
+    //   "test":()=>({//异步组件
+    //       component:import("@/components/test"),
+    //       loading:"加载时的组件",
+    //       error:"失败时的组件",
+    //       deloy:200,//延时时间
+    //       timeout:3000,//超时时间
+    //   })
+  },
 
   computed: {
       

@@ -6,7 +6,7 @@ Vue.use(Router);
 
 //动态添加路由this.$router.addRoutes([]);
 let router=new Router({
-    mode:"history",
+    mode:"hash",// hash / history
     routes:[
         {
             path:"/",
@@ -41,12 +41,18 @@ let router=new Router({
                         {
                             path:"netConfig",
                             name:"netConfig",
-                            component:()=>import("@/pages/config/netConfig/netConfigList")
+                            component:()=>import("@/pages/config/netConfig/netConfigList"),
+                            meta:{
+                                keepAlive:true,//用多了会有是性能问题
+                            },
                         },
                         {
                             path:"netConfig/Edit",
                             name:"netConfigEdit",
-                            component:()=>import("@/pages/config/netConfig/netConfigEdit")
+                            component:()=>import("@/pages/config/netConfig/netConfigEdit"),
+                            meta:{
+                                keepAlive:false
+                            }
                         }
                     ]
                 },

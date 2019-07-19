@@ -90,6 +90,11 @@ export default {
     return {
       msg: 'Welcome to Your Vue.js App'
     }
+  },
+  mounted(){
+    setTimeout(() => {
+      this.$emit("haha","123456");
+    }, 2000);
   }
 }
 </script>

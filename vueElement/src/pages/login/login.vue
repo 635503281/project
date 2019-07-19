@@ -36,6 +36,9 @@
             </div>
         </el-main>    -->
         <div>
+            <el-button  @click="login">haha</el-button>
+        </div>
+        <div>
             <canvas id="can" width=800 height=600></canvas>
         </div>
         <!-- <el-footer height="25%"></el-footer> -->
@@ -47,6 +50,7 @@
 <script>
 import {checkUser,getLangList} from "@/http/getData";
 import {mapState} from "vuex";
+import Hello from "@/components/HelloWorld";
 
 export default {
     data () {
@@ -80,7 +84,9 @@ export default {
 
     props : {},
 
-    components: {},
+    components: {
+        Hello
+    },
 
     computed: {
         message:{
@@ -114,6 +120,10 @@ export default {
         }
 
         this.getCode();
+
+        this.event.listen("haha",function(event,a){
+            console.log(a);
+        });
 
         document.onkeydown=function(event){
             let e=event||window.event;
@@ -209,7 +219,7 @@ export default {
             window.requestAnimationFrame(function(){draw(ctx,sun,moon,earth)});
         }
 
-        init();
+        // init();
 
 
     },
@@ -218,14 +228,18 @@ export default {
         // drowYellowMan(x,y,r){
         //     this.canvas.
         // },
-
+        haha($event,a){
+            this.event.emit("haha",$event,a);
+            // console.log(a);
+            
+        },
 
 
         //登录
         login(formName){
-            this.$refs[formName].validate((valid)=>{
-                if(valid){
-                    this.loading=true;
+            // this.$refs[formName].validate((valid)=>{
+            //     if(valid){
+            //         this.loading=true;
 
                     this.$store.commit("SET_LOGIN_FLAG",true);
                     this.$router.push('/index');
@@ -265,10 +279,10 @@ export default {
                     //     }
                     // }.bind(this),2000);
 
-                }else{
+            //     }else{
 
-                }
-            })
+            //     }
+            // })
 
             
             
@@ -306,6 +320,7 @@ header,footer{
 #can{
     // width:800px;
     // height:600px;
+    display: flex;
     margin:0 auto;
     background:#ccc;
 }

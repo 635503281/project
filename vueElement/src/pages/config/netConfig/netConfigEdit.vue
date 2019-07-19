@@ -22,12 +22,23 @@
             </el-form-item>
             
         </el-form>
+        <el-upload class="upload-demo" ref="upload" action="/test" :http-request="upload"
+            
+            :file-list="fileList" :auto-upload="false" multiple>
+            <el-button slot="trigger" size="small" type="primary">选取文件</el-button>
+            <el-button style="margin-left: 10px;" size="small" type="success" @click="submitUpload">上传到服务器</el-button>
+            <div slot="tip" class="el-upload__tip">只能上传jpg/png文件，且不超过500kb</div>
+        </el-upload>
     </div>
 </template>
 
 <script>
 import {insertUser,getUserById,updateUser} from "@/http/getData"
 export default {
+    // beforeRouteLeave(to,form,next){
+    //     if(to.name=="netConfig")to.meta.keepAlive=true;
+    //     next();
+    // },
     data () {
         return {
             user:{
@@ -46,7 +57,8 @@ export default {
                 age:null,
                 gao:null
             },
-            id:parseInt(this.$route.query.id)
+            id:parseInt(this.$route.query.id),
+            fileList:[]
 
         };
     },
@@ -58,7 +70,31 @@ export default {
     computed: {
         
     },
+    created(){
+        let arr=[
+                {id:1,name:1,child:
+                    [
+                        {id:11,name:11,child:"asds"}
+                    ]
+                },
+                {id:2,name:2,child:[{id:22,name:22}]},
+                {id:3,name:3,child:[{id:33,name:33,child:[{id:333,name:333,child:[{id:3333,name:3333}]}]},{id:34,name:34,child:[{id:344,name:344}]}]},
+                {id:1},
+                {id:3}
+            ];
 
+        // arr.forEach(function mapp(value){
+        //     value.isRead=true;
+        //     if(Array.isArray(value.child))value.child.forEach(mapp);
+
+        // });
+        // console.log(arr);
+
+        
+        // console.log(arr.filterSame("id"))
+        console.log([1,2,{id:1},3,2,1,5,6,7,{id:2},{id:1},1,2].filterSame("id"))
+    },
+    
     mounted(){
         if(this.id==0){//添加
 
@@ -124,6 +160,14 @@ export default {
         // 清空asyncMessage
         clearMessage(){
             this.asyncMessage={ userName:null,password:null,age:null,gao:null};
+        },
+        upload(value){
+            this.axios.post(value.action,value.file).then(()=>{
+
+            },()=>{});
+        },
+        submitUpload(){
+            this.$refs.upload.submit();
         }
     }
 }
