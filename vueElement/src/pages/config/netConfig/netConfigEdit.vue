@@ -92,7 +92,8 @@ export default {
 
         
         // console.log(arr.filterSame("id"))
-        console.log([1,2,{id:1},3,2,1,5,6,7,{id:2},{id:1},1,2].filterSame("id"))
+        console.log([1,2,{id:1},3,2,1,5,6,7,{id:2},{id:1},1,2].filterSame("id"));
+        console.log([1,2,1,2].filterSame())
     },
     
     mounted(){
@@ -155,7 +156,7 @@ export default {
         },
         //返回
         goBack(){
-            history.go(-1);
+            this.$router.push({name:"netConfig"})
         },
         // 清空asyncMessage
         clearMessage(){

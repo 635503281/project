@@ -10,11 +10,15 @@ let state={
     lang:"zh-cn",
     login_flag:false,
     refresh:true,//刷新index页面
-    message:"test"
+    message:"test",
+    currentMenu:{
+        open:null,
+        active:null
+    }
 };
 
 //监听刷新事件    
-window.onunload=function(){
+window.onbeforeunload=function(){
     sessionStorage.setItem("state",JSON.stringify(state));
 }
 if(sessionStorage.getItem("state")){

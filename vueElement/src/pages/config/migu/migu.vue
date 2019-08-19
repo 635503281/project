@@ -14,6 +14,7 @@
        </div>
        <div>
            <el-progress type="circle" :percentage="data3" :status="status"></el-progress>
+           <el-progress :percentage="data3" :status="status" :text-inside="true"></el-progress>
            <div style="width:50%;margin:0 auto;">
                <el-slider v-model="data3" @change="changeSlider" ></el-slider>
            </div>
@@ -161,7 +162,7 @@ export default {
                 message:'这是提示文案这是提示文案这是提示文案这是提示文案这是提示文案这是提示文案这是提示文案这是提示文案',
                 duration:3000  
             });
-            // this.myToast("自定义弹出层插件")
+            // this.myToast("自定义弹出层插件") 
             // .then(()=>{
             //     console.log('点击了确认');
             // });

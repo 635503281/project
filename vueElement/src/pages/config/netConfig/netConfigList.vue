@@ -75,6 +75,9 @@
 import {getUser,deleteUser} from "@/http/getData"
 import Pagination from "@/components/Pagination"
 export default {
+    // beforeRouteEnter(to,from,next){
+
+    // },
     // beforeRouteLeave(to,from,next){
     //     if(to.name=="netConfigEdit"){
     //         from.meta.keepAlive=true;

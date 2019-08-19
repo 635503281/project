@@ -134,39 +134,39 @@ export default {
         }.bind(this);
 
         this.canvas=document.getElementById("can").getContext("2d");
-        // this.canvas.moveTo(0,0);
-        // this.canvas.lineTo(10,20);
-        // this.canvas.stroke();
+        this.canvas.moveTo(0,0);
+        this.canvas.lineTo(10,20);
+        this.canvas.stroke();
 
-        // this.canvas.rect(50,50,100,50);
-        // this.canvas.strokeStyle="red";
-        // this.canvas.stroke();
-        // this.canvas.fillStyle="red";
-        // this.canvas.fill();
+        this.canvas.rect(50,50,100,50);
+        this.canvas.strokeStyle="red";
+        this.canvas.stroke();
+        this.canvas.fillStyle="red";
+        this.canvas.fill();
 
-        // this.canvas.font="bold 10px/40px microsoft yehei";
-        // this.canvas.fillText("李赛",50,50)
-        //  for (var i=0;i<6;i++){
-        //     for (var j=0;j<6;j++){
-        //         this.canvas.strokeStyle = 'rgb(0,' + Math.floor(255-42.5*i) + ',' + Math.floor(255-42.5*j) + ')';
-        //         this.canvas.beginPath();
-        //         this.canvas.arc(25+j*50,25+i*50,20,0,Math.PI*2,true);
-        //         this.canvas.stroke();
-        //     }
-        // }
+        this.canvas.font="bold 10px/40px microsoft yehei";
+        this.canvas.fillText("李赛",50,50)
+         for (var i=0;i<6;i++){
+            for (var j=0;j<6;j++){
+                this.canvas.strokeStyle = 'rgb(0,' + Math.floor(255-42.5*i) + ',' + Math.floor(255-42.5*j) + ')';
+                this.canvas.beginPath();
+                this.canvas.arc(25+j*50,25+i*50,20,0,Math.PI*2,true);
+                this.canvas.stroke();
+            }
+        }
         
-        // this.canvas.save();
-        // this.canvas.beginPath();
-        // this.canvas.setLineDash([4,2]);
-        // this.canvas.strokeRect(10,10, 100, 100);
+        this.canvas.save();
+        this.canvas.beginPath();
+        this.canvas.setLineDash([4,2]);
+        this.canvas.strokeRect(10,10, 100, 100);
 
-        // this.canvas.restore();
-        // this.canvas.beginPath();
-        // this.canvas.moveTo(200,200);
-        // this.canvas.lineTo(250,200);
-        // this.canvas.lineTo(250,250);
-        // this.canvas.closePath();
-        // this.canvas.stroke();
+        this.canvas.restore();
+        this.canvas.beginPath();
+        this.canvas.moveTo(200,200);
+        this.canvas.lineTo(250,200);
+        this.canvas.lineTo(250,250);
+        this.canvas.closePath();
+        this.canvas.stroke();
 
 
         

@@ -49,8 +49,8 @@
 export default {
     data () {
         return {
-            openedMenu:"migu",
-            activeMenu:"/index/config/migu",
+            openedMenu: this.$store.state.currentMenu.open||"migu",
+            activeMenu:this.$store.state.currentMenu.active||"/index/config/migu",
         }
            
     },
@@ -62,11 +62,7 @@ export default {
     computed: {},
 
     created(){
-        let hash=window.location.hash;
-        let activeMenu=hash.split("#")[1];
-        
-        
-        this.activeMenu=activeMenu;
+        console.log(this.$store.state.currentMenu)
     },
 
     mounted(){
@@ -77,6 +73,7 @@ export default {
         selectMenu(index,indexPath){
             this.openedMenu=indexPath[0];
             this.activeMenu=indexPath[1];
+            this.$store.commit("CHANGE_MENU",indexPath);
         }
     },
     destroyed(){

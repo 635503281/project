@@ -4,11 +4,11 @@
     <el-container class="index">
         <el-header class="clear">
             <ul class="ul1 clear left">
-                <router-link tag="li" to="/index/config" active-class="active">配置管理</router-link>
-                <router-link tag="li" to="/index/warn" active-class="active">告警管理</router-link>
-                <router-link tag="li" to="/index/inspect" active-class="active">巡检监控</router-link>
-                <router-link tag="li" to="/index/feature" active-class="active">性能管理</router-link>
-                <router-link tag="li" to="/index/safe" active-class="active">安全管理</router-link>
+                <router-link tag="li" to="config" append active-class="active">配置管理</router-link>
+                <router-link tag="li" to="warn" append active-class="active">告警管理</router-link>
+                <router-link tag="li" to="inspect" append active-class="active">巡检监控</router-link>
+                <router-link tag="li" to="feature" append active-class="active">性能管理</router-link>
+                <router-link tag="li" to="safe" append active-class="active">安全管理</router-link>
             </ul>
 
             <el-dropdown class="right setting" trigger="click">

@@ -43,8 +43,24 @@ let router=new Router({
                             name:"netConfig",
                             component:()=>import("@/pages/config/netConfig/netConfigList"),
                             meta:{
-                                keepAlive:true,//用多了会有是性能问题
+                                keepAlive:false,//用多了会有是性能问题
                             },
+                            beforeEnter:(to,from,next)=>{
+                               if(from.name=="netConfigEdit"){
+                                   to.meta.keepAlive=true;
+                               }else{
+                                   to.meta.keepAlive=false;
+                               }
+                               next();
+                            },
+                            beforeLeave:(to,from,next)=>{
+                                if(to.name=="netConfigEdit"){
+                                    from.meta.keepAlive=true;
+                                }else{
+                                    from.meta.keepAlive=false;
+                                }
+                                next();
+                            }
                         },
                         {
                             path:"netConfig/Edit",
