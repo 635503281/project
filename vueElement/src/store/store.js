@@ -6,23 +6,20 @@ import getters from "./getter"
 
 Vue.use(Vuex);
 
-let state={
-    lang:"zh-cn",
-    login_flag:false,
-    refresh:true,//刷新index页面
-    message:"test",
-    currentMenu:{
-        open:null,
-        active:null
-    }
-};
+let state=require("./state").default;
 
+const host=window.location.host;
 //监听刷新事件    
 window.onbeforeunload=function(){
-    sessionStorage.setItem("state",JSON.stringify(state));
+    if(sessionStorage.length)sessionStorage.setItem(`state${host}`,JSON.stringify(state));
+    
 }
-if(sessionStorage.getItem("state")){
-    state=Object.assign({},state,JSON.parse(sessionStorage.getItem("state")) );
+if(sessionStorage.getItem(`state${host}`)){
+    state=Object.assign({},state,JSON.parse(sessionStorage.getItem(`state${host}`)) );
+    state.lang=sessionStorage.getItem("lang")||'zh-cn';
+}
+if(localStorage.getItem(`myLicense${host}`)){
+    state.license=JSON.parse(localStorage.getItem(`myLicense${host}`));
 }
 
 export default new Vuex.Store({

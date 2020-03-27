@@ -3,24 +3,59 @@
 // see http://vuejs-templates.github.io/webpack for documentation.
 
 const path = require('path')
+let target = "http://localhost:8081/";
+// target = "http://10.41.74.89:6600/";
+// target = "http://10.39.132.62:8080/";
+// target = 'http://10.41.77.116:6600/';
+// target = 'http://10.41.74.6:6600/';
+// target = 'http://10.39.130.233:8080';
+// target = "http://172.16.93.7:8080/";
+// target = "http://10.39.132.56:8080";
+target = "http://10.41.74.249:6600/";
+
+
+const proxyConfig={//代理测试
+    target: target,
+    changeOrigin: true,
+    secure: false,
+    onProxyRes: function(proxyRes, req, res) {//代理收到请求之后将数据发给浏览器之前做一层拦截
+      var cookies = proxyRes.headers['set-cookie'];
+      if (cookies) {
+          var newCookie = cookies.map(function(cookie) { 
+              return cookie.split(";").map(function(value){
+                  if(value.includes("Path="))value=" Path=/";
+                  return value
+              }).join(";");  //修改cookie的路径path
+        
+          });
+          delete proxyRes.headers['set-cookie'];
+          proxyRes.headers['set-cookie'] = newCookie;
+      }
+    },
+
+}
+
+let splitUrl = target.replace("http","ws").split(":");splitUrl[2] = "54405";
+const proxySocket = {//代理socket
+    target: splitUrl.join(":"),
+    ws:true,
+    // changeOrigin: true,
+    secure:false,
+}
 
 module.exports = {
   dev: {
-
     // Paths
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
     proxyTable: {
-      '/rest/*': {//代理测试
-        target: "http://localhost:8084",
-        changeOrigin: true,
-        secure: false
-       }
+      '/mysocket':proxySocket,
+      '/**': proxyConfig,
     },
 
     // Various Dev Server settings
-    host: 'localhost', // can be overwritten by process.env.HOST
-    port: 7070, // can be overwritten by process.env.PORT, if port is in use, a free one will be determined
+    host: '0.0.0.0', // can be overwritten by process.env.HOST
+    port: 8071, // can be overwritten by process.env.PORT, if port is in use, a free one will be determined
     autoOpenBrowser: false,
     errorOverlay: true,
     notifyOnErrors: true,
@@ -32,7 +67,7 @@ module.exports = {
      */
 
     // https://webpack.js.org/configuration/devtool/#development
-    devtool: 'cheap-module-eval-source-map',
+    devtool:"source-map", //'cheap-module-eval-source-map',
 
     // If you have problems debugging vue-files in devtools,
     // set this to false - it *may* help
@@ -44,18 +79,18 @@ module.exports = {
 
   build: {
     // Template for index.html
-    index: path.resolve(__dirname, '../dist/index.html'),
+    index: path.resolve(__dirname, '../index.html'),
 
     // Paths
-    assetsRoot: path.resolve(__dirname, '../dist'),
+    assetsRoot: path.resolve(__dirname, '../'),
     assetsSubDirectory: 'static',
-    assetsPublicPath: '/',
+    assetsPublicPath: '/',//项目跟路径
 
     /**
      * Source Maps
      */
 
-    productionSourceMap: true,
+    productionSourceMap: false,
     // https://webpack.js.org/configuration/devtool/#production
     devtool: '#source-map',
 

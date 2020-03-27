@@ -6,6 +6,13 @@ module.exports = {
     "postcss-url": {},
     // to edit target browsers: use "browserslist" field in package.json
     "autoprefixer": {},
-    "postcss-px2rem":{"remUnit":75}
+    "postcss-pxtorem":{
+      "rootValue":54,
+      "unitPrecision":5,
+      "propWhiteList":[],
+      "replace":true,
+      "mediaQuery":false,
+      "minPixelValue":2
+    }
   }
 }

@@ -14,7 +14,7 @@ function resolve (dir) {
 module.exports = {
   context: path.resolve(__dirname, '../'),
   entry: {
-    app: './src/main.js'
+    app: ['babel-polyfill','./src/main.js']
   },
   output: {
     path: config.build.assetsRoot,
@@ -69,8 +69,9 @@ module.exports = {
     ]
   },
   plugins:[
-    new webpack.ProvidePlugin({
-      Vue:"vue"
+    //把dll的vendor-manifest.json引用到需要的预编译的依赖
+    new webpack.DllReferencePlugin({
+      manifest:require('../vendor-manifest.json')
     })
   ],
   node: {

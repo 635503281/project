@@ -1,17 +1,14 @@
 import Vue from "vue"
 import locale from "element-ui/lib/locale"
-import store from "@/store/store"
 import VueI18n from "vue-i18n"
-import zh_cn from "./langs/zh-cn"
-import en_us from "./langs/en-us"
 
 Vue.use(VueI18n);
 
 let i18n=new VueI18n({
-    locale:store.state.lang,
+    locale:sessionStorage.getItem("lang")||'zh-cn',
     messages:{
-        "zh-cn":zh_cn,
-        "en-us":en_us
+        "zh-cn":require("./langs/zh-cn").default,
+        "en-us":require("./langs/en-us").default
     }
 
 });
