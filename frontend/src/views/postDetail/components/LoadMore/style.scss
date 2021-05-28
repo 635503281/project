@@ -1,0 +1,15 @@
+.load-more {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  .load-text {
+    color: var(--blueColor);
+    font-size: 12px;
+    line-height: 16px;
+  }
+  .load-icon {
+    width: 16px;
+    height: 16px;
+  }
+}

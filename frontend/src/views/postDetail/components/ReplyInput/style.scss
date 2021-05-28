@@ -1,0 +1,37 @@
+.reply-input-wrapper {
+  display: flex;
+  align-items: center;
+  margin-top: 19px;
+  .reply-input {
+    // flex: 668px 0 0;
+    flex: 1;
+    display: inline-block;
+    font-size: 12px;
+    color: #3D4757;
+    height: 32px;
+    margin-right: 10px;
+    border: 1px solid #E7E9EB;
+    padding-left: 10px;
+    box-sizing: border-box;
+    background: #fff;
+    &::placeholder {
+      color: #626B84;
+      opacity: 0.4;
+    }
+  }
+  .reply-btn {
+    height: 32px;
+    line-height: 32px;
+    border-radius: 2px;
+    background: var(--blueColor);
+    text-align: center;
+    font-size: 14px;
+    color: #fff;
+    padding: 0 20px;
+    white-space: nowrap;
+    cursor: pointer;
+  }
+  .btn-default {
+    opacity: 0.3;
+  }
+}

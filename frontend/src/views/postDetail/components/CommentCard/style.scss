@@ -1,0 +1,47 @@
+.comment-item {
+  .comment-content {
+    margin-top: 16px;
+    font-size: 14px;
+    line-height: 20px;
+    color: #3D4757;
+    word-break: break-word;
+    overflow-x: hidden;
+    ::v-deep table {
+      display: inline-block!important;
+      max-width: 100%;
+      overflow: auto;
+    }
+  }
+  .bot-menu {
+    display: flex;
+    align-items: center;
+    margin-top: 25px;
+    .menu-item {
+      display: flex;
+      align-items: center;
+      margin-right: 20px;
+      cursor: pointer;
+      transition: width 0.25s ease;
+      .icon {
+        margin-right: 4px;
+        line-height: 16px;
+      }
+      .limit-w {
+        min-width: 12px;
+        white-space: nowrap;
+      }
+      .text {
+        font-size: 12px;
+        color: #949AAE;
+      }
+      .count-text {
+        color: var(--blueColor);
+        font-size: 12px;
+      }
+    }
+  }
+  .dialog-content {
+    font-size: 14px;
+    color: #767C85;
+  }
+}

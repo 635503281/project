@@ -1,0 +1,82 @@
+.el-dialog {
+  padding: 0 30px 30px;
+  .el-dialog__header {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    font-size: 18px;
+    color: #3C414B;
+    font-weight: bold;
+    height: 78px;
+    border-bottom: 1px solid #E7E9EB;
+    box-sizing: border-box;
+  }
+  .el-dialog__headerbtn {
+    top: 31px;
+    right: 30px;
+  }
+  .el-dialog__body {
+    padding: 36px 0;
+  }
+  .el-dialog__footer {
+    padding: 0;
+    display: flex;
+    flex-direction: row-reverse;
+    .btn {
+      border-radius: 2px;
+      box-sizing: border-box;
+      height: 32px;
+      text-align: center;
+      font-size: 14px;
+      padding: 6px 20px;
+      cursor: pointer;
+    }
+    .btn-cancel {
+      border: 1px solid #E7E9EB;
+      color: #626B84;
+      margin-right: 10px;
+    }
+    .btn-delete {
+      background: #EB5451;
+      color: #fff;
+    }
+    .btn-submit {
+      background: var(--blueColor);
+      border: 1px solid var(--blueColor);
+      color: #fff;
+    }
+    .btn-submit.btn-disabled-submit {
+      opacity: 0.3;
+    }
+  }
+}
+.el-notification {
+  align-items: center!important;
+  height: 40px;
+  border-radius: 2px!important;
+  padding: 0 16px!important;
+  width: unset!important;
+  box-shadow:0px 2px 12px 0px rgba(56,56,56,0.2)!important;
+}
+.el-notification__title {
+  margin: unset!important;
+  font-size: 14px!important;
+  color: #3D4757!important;
+  height: 20px;
+  line-height: 20px!important;
+  font-weight: normal!important;
+}
+.el-notification__icon {
+  font-size: 16px!important;
+  width: 16px!important;
+  height: 16px!important;
+}
+.el-icon-success {
+  color: #1FBB7D!important;
+}
+.el-notification__closeBtn {
+  display: none!important;
+}
+.el-notification__group  {
+  margin-left: 12px!important;
+}

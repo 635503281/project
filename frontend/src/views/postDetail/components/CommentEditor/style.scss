@@ -1,0 +1,28 @@
+
+.editor-wrapper {
+  background: #fff;
+  padding: 30px;
+  margin-top: 16px;
+  .user-info {
+    margin-bottom: 15px;
+  }
+  .btn-publish {
+    display: flex;
+    flex-direction: row-reverse;
+    .btn {
+      height: 26px;
+      border-radius: 2px;
+      font-size: 12px;
+      cursor: pointer;
+      padding: 0 30px;
+      background: var(--blueColor);
+      color: #fff;
+    }
+    .btn-default {
+      opacity: 0.3;
+    }
+    .btn-submit {
+      opacity: 1;
+    }
+  }
+}

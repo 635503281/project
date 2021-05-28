@@ -1,0 +1,38 @@
+.bot-menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 28px;
+  .action-icon {
+    margin-right: 4px;
+  }
+  .action-text {
+    font-size: 12px;
+    color: #949AAE;
+  }
+  .menu-item {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  .left-action-list, .right-action-list {
+    display: flex;
+    align-items: center;
+    .action-btn {
+      .active-text {
+        color: var(--blueColor);
+      }
+      .default-text {
+        color: #949AAE;
+      }
+    }
+    .menu-list {
+      display: flex;
+      align-items: center;
+    }
+  }
+  .dialog-content {
+    font-size: 14px;
+    color: #767C85;
+  }
+}

@@ -1,0 +1,46 @@
+.user-info-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px;
+  box-sizing: border-box;
+  background: #fff;
+  border-radius: 2px;
+  .user-info {
+    display: flex;
+    align-items: center;
+    .avatar {
+      width: 72px;
+      height: 72px;
+    }
+    .text-content {
+      display: flex;
+      flex-direction: column;
+      margin-left: 24px;
+      .nickname {
+        font-size: 18px;
+        font-weight: bold;
+        line-height: 25px;
+        color: #3D4757;
+        word-break: break-word;
+      }
+      .position {
+        margin-top: 6px;
+        color: #767C85;
+        font-size: 14px;
+        height: 20px;
+        line-height: 20px;
+      }
+    }
+  }
+  .edit-btn {
+    border: 1px solid var(--blueColor);
+    border-radius: 2px;
+    height: 32px;
+    text-align: center;
+    padding: 0 20px;
+    color: var(--blueColor);
+    white-space: nowrap;
+    cursor: pointer;
+  }
+}

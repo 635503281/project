@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="100px" height="100px" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>logo/日历</title>
+    <defs>
+        <linearGradient x1="50%" y1="-12.437454%" x2="50%" y2="94.3595268%" id="linearGradient-1">
+            <stop stop-color="#2747E4" offset="0%"></stop>
+            <stop stop-color="#556FF2" offset="100%"></stop>
+        </linearGradient>
+        <path d="M52,12 L52,46.6761364 C52,48.5118556 50.5118556,50 48.6761364,50 L3.32386364,50 C1.48814444,50 1.11298918e-15,48.5118556 0,46.6761364 L0,12 L52,12 Z" id="path-2"></path>
+        <filter x="-3.2%" y="-55.5%" width="106.4%" height="210.9%" filterUnits="objectBoundingBox" id="filter-4">
+            <feGaussianBlur stdDeviation="0.553977273" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <path d="M36,23.4884297 C36,23.8117422 35.8668869,24.1207929 35.631958,24.3429177 C32.4365224,27.3642018 30.2734888,30.5832292 29.1428571,34 C27.9294709,36.603055 27.1796303,39.7658907 26.8933353,43.4885071 C26.8711354,43.7771662 26.6304341,44.0000667 26.3409226,44 L26.3409226,44 L20.5952597,44 L20.5952597,44 L20.551408,43.9982618 C20.2463928,43.9740432 20.0187621,43.7071464 20.0430205,43.4021343 C20.331006,39.7751762 21.0785706,36.6411314 22.2857143,34 C24.3394987,28.5848809 25.605055,27.277216 29.1428571,24 L29.1428571,24 L16.5539773,24 C16.2480241,24 16,23.7519759 16,23.4460227 L16,18.5539773 C16,18.2480241 16.2480241,18 16.5539773,18 L35.4460227,18 C35.7519759,18 36,18.2480241 36,18.5539773 Z" id="path-5"></path>
+        <filter x="-15.0%" y="-11.5%" width="130.0%" height="123.1%" filterUnits="objectBoundingBox" id="filter-7">
+            <feOffset dx="0" dy="0" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="1" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.106557615   0 0 0 0 0.21924223   0 0 0 0 0.782665308  0 0 0 1 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <linearGradient x1="50%" y1="115.378873%" x2="50%" y2="3.15793632%" id="linearGradient-8">
+            <stop stop-color="#556FF2" offset="0%"></stop>
+            <stop stop-color="#4977FF" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="logo/日历" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="编组" transform="translate(24.000000, 25.000000)">
+            <mask id="mask-3" fill="white">
+                <use xlink:href="#path-2"></use>
+            </mask>
+            <use id="蒙版" fill="url(#linearGradient-1)" xlink:href="#path-2"></use>
+            <path d="M0.515771944,13.3508523 L51.4842281,13.3508523 C51.769081,13.3508523 52,13.5817712 52,13.8666242 L52,14.4970121 C52,14.7818651 51.769081,15.0127841 51.4842281,15.0127841 L0.515771944,15.0127841 C0.230918965,15.0127841 2.56929034e-16,14.7818651 0,14.4970121 L0,13.8666242 C-3.48844289e-17,13.5817712 0.230918965,13.3508523 0.515771944,13.3508523 Z" id="矩形" fill="#324DD4" opacity="0.177279281" style="mix-blend-mode: multiply;" filter="url(#filter-4)" mask="url(#mask-3)"></path>
+            <mask id="mask-6" fill="white">
+                <use xlink:href="#path-5"></use>
+            </mask>
+            <g id="形状结合">
+                <use fill="black" fill-opacity="1" filter="url(#filter-7)" xlink:href="#path-5"></use>
+                <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-5"></use>
+            </g>
+            <path d="M51.9865774,3.43847962 L51.9865774,13.2954545 L51.9865774,13.2954545 L-7.97745708e-14,13.2954545 L-7.97745708e-14,3.43847962 C-8.00071336e-14,1.53945976 1.53945976,2.07365762e-14 3.43847962,1.99436427e-14 L48.5480978,1.99436427e-14 C50.4471177,1.95947984e-14 51.9865774,1.53945976 51.9865774,3.43847962 Z" id="路径" fill="url(#linearGradient-8)"></path>
+            <rect id="矩形备份-7" fill="#FFFFFF" x="18" y="6" width="16" height="2.36363636" rx="0.687695925"></rect>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,55 @@
+.user-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .reply-owner-info {
+    display: flex;
+    align-items: center;
+    padding-right: 12px;
+    .reply-owner-avatar {
+      width: 30px;
+      height: 30px;
+      margin-right: 12px;
+    }
+    .reply-to-info {
+      .nickname, .to-nickname {
+        color: #767C85;
+        font-size: 14px;
+        font-weight: bold;
+        height: 20px;
+        line-height: 20px;
+        word-break: break-word;
+      }
+      .reply-tag {
+        margin: 0 8px;
+        font-size: 14px;
+        color: #767C85;
+        height: 20px;
+        line-height: 20px;
+      }
+    }
+  }
+  .user-info {
+    display: flex;
+    align-items: center;
+    .avatar {
+      width: 30px;
+      height: 30px;
+      margin-right: 12px;
+    }
+    .nickname {
+      font-size: 14px;
+      line-height: 20px;
+      font-weight: bold;
+      color: #3D4757;
+      word-break: break-word;
+      padding-right: 12px;
+    }
+  }
+  .time {
+    font-size: 12px;
+    color: #949AAE;
+    line-height: 17px;
+    white-space: nowrap;
+  }
+}

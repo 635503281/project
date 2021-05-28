@@ -1,0 +1,20 @@
+# 编译
+FROM khub.wps.cn/sreopen/node:12.16.3 AS frontend-build-env
+ARG KAE_KOA_NPM_MIRRORS 
+ENV KAE_KOA_NPM_MIRRORS $KAE_KOA_NPM_MIRRORS
+ARG BUILD_ENV=$BUILD_ENV
+WORKDIR /sources
+COPY . .
+RUN cd /sources && ./deploy/build.sh
+
+# 运行时镜像
+FROM khub.wps.cn/sreopen/sre-base:latest
+ENV KAE_APP_NAME 'woa-community-web'
+WORKDIR /$KAE_APP_NAME
+COPY --from=frontend-build-env /sources/dist ./wwwroot
+COPY ./deploy/nginx ./nginx
+COPY ./deploy/supervisord ./supervisord
+COPY ./deploy/start.sh /usr/local/bin/start.sh
+RUN chmod +x /usr/local/bin/start.sh
+
+CMD /usr/local/bin/start.sh

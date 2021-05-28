@@ -1,0 +1,75 @@
+version: "3"
+services:
+  frontend:
+    image: tools.wwo.wps.cn/wwo/node:latest
+    tty: true
+    volumes: 
+      - "./frontend:/workspace"
+    command: npm run dev
+    working_dir: /workspace
+    ports: 
+      - 3000:3000
+    environment:
+        - API_BASE_URL=http://backend:3000
+    links: 
+      - backend
+  backend:
+    image: tools.wwo.wps.cn/wwo/node:latest
+    tty: true
+    volumes: 
+      - "./backend:/workspace"
+    working_dir: /workspace
+    command: npm run start:dev
+    environment: 
+      - DB_HOST=postgres
+      - DB_PORT=5432
+      - DB_USER=wwo
+      - DB_PASS=wwo
+      - DB_DIALECT=postgres
+      - DB_NAME=support
+      - ES_URL=http://elasticsearch:9200/
+    links: 
+      - postgres
+      - elasticsearch
+  postgres:
+    image: tools.wwo.wps.cn/wwo/postgres:latest
+    restart: always
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_PASSWORD=wwo
+      - POSTGRES_DB=support
+      - POSTGRES_USER=wwo
+    links:
+      - elasticsearch
+    command: [ "postgres", "-c", "wal_level=logical" ]
+
+  elasticsearch:
+    image: tools.wwo.wps.cn/wwo/elasticsearch:latest
+    restart: always
+    ports:
+      - 9200:9200
+    environment: 
+      - discovery.type=single-node
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+  redis:
+    image: tools.wwo.wps.cn/wwo/redis:latest 
+  pgsync:
+    image: tools.wwo.wps.cn/wwo/pgsync:latest
+    volumes: 
+      - "./tools/pgsync/pgsync.sh:/code/pgsync.sh" 
+      - "./tools/pgsync/schema.json:/code/schema.json"
+    command: /code/pgsync.sh
+    depends_on:
+      - postgres
+      - redis
+      - elasticsearch
+    environment:
+      - PG_USER=wwo
+      - PG_HOST=postgres
+      - PG_PASSWORD=wwo
+      - PG_PORT=5432
+      - ELASTICSEARCH_PORT=9200
+      - ELASTICSEARCH_HOST=elasticsearch
+      - REDIS_HOST=redis
+

@@ -1,0 +1,13 @@
+.reply-wrapper {
+  padding: 16px 49px 16px 16px;
+  padding-right: 0;
+  background: #F7F9FA;
+  margin-top: 27px;
+  border-radius: 1px;
+  .reply-item {
+    margin-bottom: 30px;
+    &:last-child {
+      margin-bottom: 0!important;
+    }
+  }
+}

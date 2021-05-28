@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="100px" height="100px" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>logo/会议</title>
+    <defs>
+        <linearGradient x1="23.98971%" y1="66.0167816%" x2="94.4169217%" y2="38.4269306%" id="linearGradient-1">
+            <stop stop-color="#0C83E8" offset="0%"></stop>
+            <stop stop-color="#0B93E0" offset="100%"></stop>
+        </linearGradient>
+        <path d="M43.6757919,0 L43.6757919,25.7972222 C43.6757919,27.7136975 42.1221817,29.2673077 40.2057064,29.2673077 L0.475791855,29.2673077 L0.475791855,29.2673077 L43.6757919,0 Z" id="path-2"></path>
+        <filter x="-13.6%" y="-14.3%" width="127.3%" height="128.6%" filterUnits="objectBoundingBox" id="filter-4">
+            <feGaussianBlur stdDeviation="0.605769231" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <linearGradient x1="50%" y1="90.3815467%" x2="50%" y2="7.68566233%" id="linearGradient-5">
+            <stop stop-color="#0884E8" offset="0%"></stop>
+            <stop stop-color="#2B71E9" offset="100%"></stop>
+        </linearGradient>
+        <path d="M3.47008547,0 L19.2,0 L19.2,0 L19.2,28.2190343 L1.81269701,40.1916431 C1.28654462,40.5539429 0.566311794,40.4211141 0.204011973,39.8949617 C0.0711425263,39.7020012 1.09285232e-12,39.4732419 1.09139364e-12,39.2389599 L1.09139364e-12,3.47008547 C1.09204712e-12,1.55361018 1.55361018,3.52050799e-16 3.47008547,0 Z" id="path-6"></path>
+        <filter x="-9.4%" y="-11.1%" width="118.8%" height="122.2%" filterUnits="objectBoundingBox" id="filter-8">
+            <feGaussianBlur stdDeviation="0.605769231" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <linearGradient x1="20.5054827%" y1="39.7950662%" x2="84.6215828%" y2="53.8909815%" id="linearGradient-9">
+            <stop stop-color="#2391FC" offset="0%"></stop>
+            <stop stop-color="#09AEED" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="88.4101123%" y1="55.6877744%" x2="29.0148328%" y2="55.6877744%" id="linearGradient-10">
+            <stop stop-color="#16C2F5" offset="0%"></stop>
+            <stop stop-color="#09AEED" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="logo/会议" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="金山会议备份" transform="translate(14.000000, 28.000000)">
+            <g id="编组-3" transform="translate(1.924208, 13.932692)">
+                <mask id="mask-3" fill="white">
+                    <use xlink:href="#path-2"></use>
+                </mask>
+                <use id="形状结合" fill="url(#linearGradient-1)" xlink:href="#path-2"></use>
+                <polygon id="路径-2" fill="#0C66C7" opacity="0.203338" style="mix-blend-mode: multiply;" filter="url(#filter-4)" mask="url(#mask-3)" points="44.7200226 20.5961538 44.7200226 12.480832 31.3930995 7.875"></polygon>
+            </g>
+            <g id="形状结合-3">
+                <mask id="mask-7" fill="white">
+                    <use xlink:href="#path-6"></use>
+                </mask>
+                <use id="矩形" fill="url(#linearGradient-5)" xlink:href="#path-6"></use>
+                <polygon id="路径-4" fill="#3C90EB" opacity="0.203338" style="mix-blend-mode: multiply;" filter="url(#filter-8)" mask="url(#mask-7)" points="2.42307692 -0.549473719 19.626072 15.1442308 21.8076923 8.52457252 3.98343097 -1.21153846"></polygon>
+            </g>
+            <path d="M45.6,3.47008547 L45.6,10.1206451 L45.6,10.1206451 L31.2901681,20.3607861 L3.63461538,0 L42.1299145,0 C44.0463898,-7.96140008e-16 45.6,1.55361018 45.6,3.47008547 Z" id="路径" fill="url(#linearGradient-9)"></path>
+            <path d="M61.4155714,3.29274656 L61.4383511,3.3280842 C62.1806243,2.84485303 63.1087533,2.57142857 64.1549637,2.57142857 C65.4830157,2.57142857 66.7602876,3.34334337 67.4795095,4.58540274 L67.5349118,4.49389697 C70.3480195,9.69359051 71.9533691,15.5788821 71.9993038,21.8159633 L72,22.2084847 L71.9993045,22.4771476 C71.9536181,28.5422672 70.3638418,34.2668168 67.5772972,39.3296953 L67.5772972,39.3296953 L67.5340756,39.2637838 C66.8057978,40.3852971 65.4190458,41.1428571 63.8280872,41.1428571 C62.8963585,41.1428571 62.0346674,40.8830338 61.3342577,40.4424466 L61.3342577,40.4424466 L61.3013836,40.4864938 L61.2886421,40.4963468 L33.4285714,22.2084847 L61.4155714,3.29274656 Z" id="形状结合" fill="url(#linearGradient-10)"></path>
+        </g>
+    </g>
+</svg>

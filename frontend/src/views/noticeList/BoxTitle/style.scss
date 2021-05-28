@@ -1,0 +1,15 @@
+.title-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding-top: 30px;
+  .title {
+    position: relative;
+    font-size: 16px;
+    font-weight: bold;
+    color:#626B84;
+    height: 22px;
+    line-height: 22px;
+  }
+}

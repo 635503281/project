@@ -1,0 +1,75 @@
+.office-notice {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  background: rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  border-radius: 2px;
+  overflow: hidden;
+  z-index: 1;
+  .notice-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    height: 40px;
+    line-height: 40px;
+    color: #fff;
+    font-size: 13px;
+    margin: 0 auto;
+    padding: 0 60px;
+    .notice-container {
+      display: flex;
+      align-items: center;
+      .notice-text {
+        color: #fff;
+        white-space: nowrap;
+      }
+      .notice-list {
+        display: flex;
+        overflow: hidden;
+        .list-item {
+          flex: 0 0 216px;
+          position: relative;
+          height: 36px;
+          line-height: 36px;
+          box-sizing: border-box;
+          .desc {
+            margin: 0 30px;
+            line-height: 14px;
+            cursor: pointer;
+          }
+          &::after {
+            content: " ";
+            position: absolute;
+            z-index: 100;
+            right: -1px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 1px;
+            height: 16px;
+            background: #fff;
+          }
+          &:last-child::after {
+            content: none;
+          }
+        }
+      }
+    }
+    .more {
+      cursor: pointer;
+      white-space: nowrap;
+      .more-text {
+        height: 17px;
+        line-height: 17px;
+        margin-right: 4px;
+      }
+      .arrow-icon {
+        width: 13px;
+        height: 13px;
+      }
+    }
+  }
+}

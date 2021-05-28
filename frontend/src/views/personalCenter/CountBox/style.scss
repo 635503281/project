@@ -1,0 +1,38 @@
+.post-count {
+  align-self: flex-start;
+  width: 314px;
+  height: 176px;
+  background: #fff;
+  border-radius: 2px;
+  box-sizing: border-box;
+  margin-left: 16px;
+  padding: 16px 16px 20px 16px;
+  .count-title {
+    font-size: 16px;
+    color: #3D4757;
+    height: 22px;
+    line-height: 22px;
+    font-weight: bold;
+  }
+  .count-list {
+    margin-top: 16px;
+    .count-item {
+      margin-bottom: 12px;
+      overflow: hidden;
+      white-space: nowrap;
+      .count-icon {
+        margin-right: 8px;
+      }
+      .count-text {
+        color: #767C85;
+        font-size: 14px;
+        line-height: 20px;
+        height: 22px;
+        .count-num {
+          color: var(--blueColor);
+          margin: 0 4px;
+        }
+      }
+    }
+  }
+}

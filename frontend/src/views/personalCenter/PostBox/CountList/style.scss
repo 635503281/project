@@ -1,0 +1,17 @@
+.menu-list {
+  display: flex;
+  align-items: center;
+  .menu-item {
+    margin-left: 27px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    .action-icon {
+      margin-right: 4px;
+    }
+    .action-text {
+      font-size: 12px;
+      color: #949AAE;
+    }
+  }
+}

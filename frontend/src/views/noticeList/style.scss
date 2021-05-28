@@ -1,0 +1,13 @@
+.notice-detail {
+  background: var(--blueColor);
+  min-height: 366px;
+  padding: 24px 60px 0;
+  .notice-list-wrapper {
+    max-width: 1200px;
+    padding: 0 30px 30px;
+    background: #fff;
+    border-radius: 2px;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+}

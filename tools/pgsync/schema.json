@@ -1,0 +1,80 @@
+[
+    {
+        "database": "support",
+        "index": "posts",
+        "setting": {
+            "analysis": {
+                "analyzer": {
+                    "ik_full": {
+                        "type": "custom",
+                        "tokenizer": "ik_max_word",
+                        "filter": ["asciifolding", "lowercase", "stop", "word_delimiter"]
+                    },
+                    "ik_simple": {
+                        "type": "custom",
+                        "tokenizer": "ik_smart",
+                        "filter": ["asciifolding", "lowercase", "stop", "word_delimiter"]
+                    },
+                    "pinyin_full": {
+                        "tokenizer": "pinyin_full"
+                    }
+                },
+                "tokenizer": {
+                    "pinyin_full": {
+                        "type": "pinyin",
+                        "keep_joined_full_pinyin": true,
+                        "keep_full_pinyin": true,
+                        "ignore_pinyin_offset": true,
+                        "keep_separate_first_letter": false
+                   } 
+                }
+            }
+        },
+        "nodes": [
+            {
+                "table": "posts",
+                "columns": [],
+                "transform": {
+                    "mapping": {
+                        "title": {
+                            "type": "text",
+                            "analyzer": "ik_full",
+                            "search_analyzer": "ik_simple",
+                            "term_vector": "with_offsets",
+                            "fields": {
+                                "pinyin": {
+                                    "type": "text",
+                                    "analyzer": "pinyin_full",
+                                    "search_analyzer": "pinyin_full",
+                                    "term_vector" : "with_offsets",
+                                    "fielddata": true
+                                }
+                            }
+                        },
+                        "content": {
+                            "type": "text"
+                        },
+                        "tag": {
+                            "type": "keyword"             
+                        },
+                        "read_count": {
+                            "type": "integer"
+                        },
+                        "reply_count": {
+                            "type": "integer"
+                        },
+                        "approval_count": {
+                            "type": "integer"
+                        },
+                        "created_at": {
+                            "type": "date"
+                        },
+                        "updated_at": {
+                            "type": "date"
+                        }
+                    }
+                }
+            }
+        ]
+    }
+]

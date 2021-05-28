@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="100px" height="100px" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>logo/官方QA</title>
+    <g id="logo/官方QA" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="编组" transform="translate(22.000000, 22.000000)">
+            <path d="M27.8721966,0 C43.2655858,0 55.7443932,12.536027 55.7443932,28 C55.7443932,33.8224436 53.9753376,39.2298075 50.9477342,43.7092429 L55.8827488,54.0292302 C56.1664097,54.6223705 55.9177217,55.3342127 55.3272887,55.6191741 C55.121732,55.7183822 54.8920631,55.7559545 54.6657941,55.7273902 L38.8736684,53.7343449 C35.4985279,55.1924146 31.7792427,56 27.8721966,56 C12.4788075,56 0,43.463973 0,28 C0,12.536027 12.4788075,0 27.8721966,0 Z" id="路径" fill="#4FA4FF"></path>
+            <text id="QA" font-family="PingFangSC-Medium, PingFang SC" font-size="24.8888889" font-weight="400" fill="#FFFFFF">
+                <tspan x="10.3817778" y="36.8888889">QA</tspan>
+            </text>
+        </g>
+    </g>
+</svg>

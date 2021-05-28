@@ -1,0 +1,145 @@
+.publish-artical {
+  max-width: 1200px;
+  margin: 24px auto 0;
+  padding: 0 60px 30px;
+  .ques-title {
+    background: #fff;
+    display: flex;
+    align-items: center;
+    height: 80px;
+    padding-left: 32px;
+    .desc-wrapper {
+      display: flex;
+      align-items: center;
+      margin-right: 24px;
+      .input-desc {
+        white-space: nowrap;
+        font-size: 16px;
+        color:#3D4757;
+        font-weight: bold;
+        height: 22px;
+        margin-bottom: 2px;
+      }
+      .ques-icon {
+        position: relative;
+        .icon-wenhao {
+          width: 16px;
+          height: 16px;
+          margin-left: 8px;
+          cursor: pointer;
+        }
+        &:hover .ques-desc {
+          display: block;
+        }
+      }
+    }
+    .input-wrapper {
+      position: relative;
+      display: flex;
+      width: 100%;
+      line-height: 14px;
+      .title-input {
+        flex: 100% 0 0;
+        height: 100%;
+        font-size: 16px;
+        color: #3D4757;
+        &::placeholder {
+          font-size: 12px;
+          color: #949AAE;
+          height: 17px;
+          line-height: 17px;
+        }
+      }
+      .count {
+        position: absolute;
+        top: 50%;
+        right: 30px;
+        transform: translateY(-50%);
+        white-space: nowrap;
+        color: #949AAE;
+        font-size: 12px;
+      }
+      .limited {
+        color: rgb(247, 11, 11);
+      }
+    }
+  }
+  .publish-editor {
+    margin-top: 16px;
+    padding: 0 30px;
+  }
+  .tag-wrapper {
+    margin-top: 16px;
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border-radius: 2px;
+    height: 80px;
+    padding-left: 32px;
+    .tag-desc {
+      font-size: 16px;
+      color: #3D4757;
+      font-weight: bold;
+      line-height: 22px;
+      height: 22px;
+    }
+    .selected-list {
+      display: flex;
+      align-items: center;
+      margin-left: 24px;
+      .tag-item {
+        display: flex;
+        align-items: center;
+        height: 24px;
+        line-height: 24px;;
+        padding: 0 12px;
+        font-size: 12px;
+        color: #949AAE;
+        background: #F2F4F7;
+        border-radius: 2px;
+        margin-right: 8px;
+        cursor: pointer;
+        .tag-del-icon {
+          margin-left: 6px;
+          width: 16px;
+          height: 16px;
+        }
+      }
+    }
+    .add-tag {
+      display: flex;
+      align-items: center;
+      margin-left: 24px;
+      cursor: pointer;
+      .add-tag-text {
+        font-size: 12px;
+        color: var(--blueColor);
+        height: 17px;
+        line-height: 17px;
+        margin-left: 4px;
+        margin-top: 2px;
+      }
+    }
+  }
+  .btn-publish {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row-reverse;
+    .btn {
+      height: 32px;
+      line-height: 32px;
+      border-radius: 2px;
+      font-size: 14px;
+      cursor: pointer;
+      padding: 0 30px;
+      background: var(--blueColor);
+      color: #fff;
+    }
+    .btn-default {
+      opacity: 0.3;
+    }
+    .btn-submit {
+      opacity: 1;
+    }
+  }
+}
