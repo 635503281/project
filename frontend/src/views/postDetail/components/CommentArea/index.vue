@@ -10,6 +10,7 @@
         @delCommentItem="delCommentItem(index)"/>
       <reply-area
         :topCommentId="comment.id"
+        :parentId="comment.id"
         v-bind="$attrs"
         v-if="true"
         :ref="`reply-area_${comment.id}`"/>
@@ -88,6 +89,7 @@ export default {
       const param = {
         id: this.$attrs.postId,
         parent_id: 0,
+        replied_comment_id: 0,//comment的直属parent
         page: this.page,
         limit: 6,
         order: 'desc'

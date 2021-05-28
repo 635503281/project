@@ -21,4 +21,9 @@ export class Search extends PageSearch {
     @IsNumber()
     @Type(() => Number)
     user_id?: number; // user_id
+
+    @IsOptional()
+    @IsNumber()
+    @Type(() => Number)
+    replied_comment_id?: number; // replied_comment_id 直属上级comment_id
 }

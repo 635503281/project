@@ -50,11 +50,11 @@ export class CommentService {
 
     // 查询comment列表 带上 creator关联 和 当前user是否赞同字段
     async findAll(search: Search): Promise<Comments> {
-        const { page, limit, order, parent_id, id, user_id } = search;
+        const { page, limit, order, parent_id, id, user_id, replied_comment_id } = search;
         const newSearch: any = {
             limit,
             offset: Math.max(page - 1, 0) * limit,
-            where: { topic_id: id, replied_comment_id: parent_id || null },
+            where: { topic_id: id, parent_id: parent_id || null, replied_comment_id: replied_comment_id || null },
             include: [
                 'creator',
                 {
